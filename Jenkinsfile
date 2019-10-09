@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('checkout') {
       steps {
-        sh '#bin/bash'
+        git(url: 'https://github.com/RAVITEJAGUDIVADA/Narendraapplication.git', branch: 'master')
       }
     }
   }
