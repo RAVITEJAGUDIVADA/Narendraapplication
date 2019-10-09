@@ -10,8 +10,7 @@ pipeline {
       parallel {
         stage('Compile') {
           steps {
-            sh 'sh compile'
-            git 'https://github.com/narendrasingamaneni91/ecommerce.git'
+            sh 'sh compile validate'
           }
         }
         stage('test') {
