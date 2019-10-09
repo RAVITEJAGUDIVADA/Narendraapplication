@@ -10,7 +10,7 @@ pipeline {
       parallel {
         stage('Compile') {
           steps {
-            bat 'mvn compile test install'
+            sh 'sh \'mvn compile\''
           }
         }
         stage('test') {
