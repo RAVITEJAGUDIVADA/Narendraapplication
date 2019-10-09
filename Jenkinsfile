@@ -10,7 +10,7 @@ pipeline {
       parallel {
         stage('Compile') {
           steps {
-            sh 'sh compile validate'
+            sh 'compile'
           }
         }
         stage('test') {
