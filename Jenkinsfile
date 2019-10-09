@@ -11,6 +11,7 @@ pipeline {
         stage('Compile') {
           steps {
             sh 'sh compile'
+            git 'https://github.com/narendrasingamaneni91/ecommerce.git'
           }
         }
         stage('test') {
