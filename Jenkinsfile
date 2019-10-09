@@ -6,5 +6,19 @@ pipeline {
         git(url: 'https://github.com/RAVITEJAGUDIVADA/Narendraapplication.git', branch: 'master')
       }
     }
+    stage('compile') {
+      parallel {
+        stage('compile') {
+          steps {
+            bat 'mvn compile'
+          }
+        }
+        stage('test') {
+          steps {
+            bat 'mvn test'
+          }
+        }
+      }
+    }
   }
 }
