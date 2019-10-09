@@ -8,9 +8,9 @@ pipeline {
     }
     stage('compile') {
       parallel {
-        stage('compile') {
+        stage('Compile') {
           steps {
-            bat 'maven test compile'
+            sh 'sh compile'
           }
         }
         stage('test') {
